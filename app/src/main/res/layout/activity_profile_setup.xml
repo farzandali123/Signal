@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1c1c1c"
+    android:padding="24dp"
+    tools:context=".ProfileSetupActivity">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set up your profile"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profiles are visible to people you message, contacts, and groups."
+        android:textColor="#888888"
+        android:textSize="14sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Profile Picture Section -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal">
+
+        <!-- Profile Image -->
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/camera_app"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Camera Icon -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/camera_app"
+            android:layout_gravity="center_horizontal"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Profile Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Farzand Ali"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp" />
+    </LinearLayout>
+
+    <!-- First Name Input -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="First name (required)"
+        android:backgroundTint="#444444"
+        android:padding="12dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="#888888"
+        android:layout_marginBottom="16dp"
+        android:enabled="false" />
+
+    <!-- Last Name Input -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Last name (optional)"
+        android:backgroundTint="#444444"
+        android:padding="12dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="#888888"
+        android:layout_marginBottom="24dp"
+        android:enabled="false" />
+
+    <!-- Visibility Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="24dp">
+
+        <!-- Icon -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/camera_app"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Who can find me by number?"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <!-- Visibility Value -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Everyone"
+            android:textColor="#888888"
+            android:textSize="14sp"
+            android:layout_gravity="end"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+
+    <!-- Next Button -->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:backgroundTint="#444444"
+        android:textColor="@android:color/white"
+        android:padding="12dp"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false" />
+
+</LinearLayout>

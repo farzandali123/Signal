@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#1c1c1c"
+    android:padding="16dp"
+    tools:context=".CreatePinActivity">
+
+    <!-- Title -->
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create your PIN"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="24dp"
+        android:gravity="center" />
+
+    <!-- Subtitle -->
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PINs can help you restore your account and keep your info encrypted with Signal."
+        android:textSize="14sp"
+        android:textColor="#888888"
+        android:layout_marginTop="8dp"
+        android:gravity="center" />
+
+    <!-- Learn More Link -->
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Learn more"
+        android:textSize="14sp"
+        android:textColor="#6a9ddf"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:clickable="true" />
+
+    <!-- PIN Input -->
+    <EditText
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberPassword"
+        android:maxLength="4"
+        android:hint="••••"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/white"
+        android:padding="12dp"
+        android:layout_marginTop="24dp" />
+
+    <!-- PIN Requirements Text -->
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PIN must be at least 4 digits"
+        android:textSize="12sp"
+        android:textColor="#888888"
+        android:layout_marginTop="8dp"
+        android:gravity="center" />
+
+    <!-- Create Alphanumeric PIN Link -->
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create alphanumeric PIN"
+        android:textSize="14sp"
+        android:textColor="#6a9ddf"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:clickable="true" />
+
+    <!-- Next Button -->
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#444444"
+        android:enabled="false"
+        android:layout_marginTop="24dp"
+        android:padding="12dp" />
+
+</LinearLayout>
