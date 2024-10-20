@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/filter_missed_calls"
+        android:title="Filter missed calls" />
+    <item
+        android:id="@+id/settings"
+        android:title="Settings" />
+    <item
+        android:id="@+id/notification_profile"
+        android:title="Notification Profile" />
+</menu>

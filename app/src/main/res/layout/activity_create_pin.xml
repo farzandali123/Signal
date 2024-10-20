@@ -12,7 +12,7 @@
 
     <!-- Title -->
     <TextView
-
+        android:id="@+id/title_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Create your PIN"
@@ -23,7 +23,7 @@
 
     <!-- Subtitle -->
     <TextView
-
+        android:id="@+id/subtitle_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="PINs can help you restore your account and keep your info encrypted with Signal."
@@ -34,7 +34,7 @@
 
     <!-- Learn More Link -->
     <TextView
-
+        android:id="@+id/learn_more_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Learn more"
@@ -46,7 +46,7 @@
 
     <!-- PIN Input -->
     <EditText
-
+        android:id="@+id/pin_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberPassword"
@@ -61,7 +61,7 @@
 
     <!-- PIN Requirements Text -->
     <TextView
-
+        android:id="@+id/pin_requirements"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="PIN must be at least 4 digits"
@@ -72,7 +72,7 @@
 
     <!-- Create Alphanumeric PIN Link -->
     <TextView
-
+        android:id="@+id/create_alphanumeric_pin_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Create alphanumeric PIN"
@@ -84,7 +84,7 @@
 
     <!-- Next Button -->
     <Button
-
+        android:id="@+id/next_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Next"
@@ -93,5 +93,4 @@
         android:enabled="false"
         android:layout_marginTop="24dp"
         android:padding="12dp" />
-
 </LinearLayout>

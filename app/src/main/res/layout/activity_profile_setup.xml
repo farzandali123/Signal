@@ -68,6 +68,7 @@
 
     <!-- First Name Input -->
     <EditText
+        android:id="@+id/first_name_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="First name (required)"
@@ -75,11 +76,11 @@
         android:padding="12dp"
         android:textColor="@android:color/white"
         android:textColorHint="#888888"
-        android:layout_marginBottom="16dp"
-        android:enabled="false" />
+        android:layout_marginBottom="16dp" />
 
     <!-- Last Name Input -->
     <EditText
+        android:id="@+id/last_name_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Last name (optional)"
@@ -87,8 +88,7 @@
         android:padding="12dp"
         android:textColor="@android:color/white"
         android:textColorHint="#888888"
-        android:layout_marginBottom="24dp"
-        android:enabled="false" />
+        android:layout_marginBottom="24dp" />
 
     <!-- Visibility Section -->
     <LinearLayout
@@ -126,6 +126,7 @@
 
     <!-- Next Button -->
     <Button
+        android:id="@+id/next_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Next"
