@@ -1,33 +1,45 @@
 package com.example.signal
 
 import android.os.Bundle
-import android.widget.ArrayAdapter
-import android.widget.Spinner
-import androidx.activity.ComponentActivity
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Setting the content view to your phone number XML layout
-        setContentView(R.layout.phone_number_layout)
+        setContentView(R.layout.activity_main)
+
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+
+        bottomNavigationView.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.menu_chats -> {
+                    loadFragment(ChatsFragment())
+                    true
+                }
+
+                R.id.menu_calls -> {
+                    loadFragment(CallsFragment())
+                    true
+                }
+
+                R.id.menu_stories -> {
+                    loadFragment(StoriesFragment())
+                    true
+                }
 
 
-        val countryCodeSpinner: Spinner = findViewById(R.id.countryCodeSpinner)
 
+                else -> false
+            }
+        }
+    }
 
-        val countryCodes = arrayOf("+1", "+44", "+91", "+81", "+86", "+61")
-
-        // Set up an ArrayAdapter
-        val adapter = ArrayAdapter(
-            this,
-            android.R.layout.simple_spinner_item,  // Default layout for spinner items
-            countryCodes
-        )
-
-        // Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
-        // Apply the adapter to the spinner
-        countryCodeSpinner.adapter = adapter
+    private fun loadFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.container, fragment)
+            .commit()
     }
 }

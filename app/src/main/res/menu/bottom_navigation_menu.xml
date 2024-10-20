@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_chats"
+        android:icon="@drawable/chat"
+        android:title="Chats"/>
+    <item
+        android:id="@+id/menu_calls"
+        android:icon="@drawable/img"
+        android:title="Calls"/>
+    <item
+        android:id="@+id/menu_stories"
+        android:icon="@drawable/stories"
+        android:title="Stories"/>
+</menu>

@@ -3,9 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="#1c1c1c"
     android:gravity="center_horizontal"
-    android:orientation="horizontal"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
     <!-- Title Text -->
@@ -13,33 +14,30 @@
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
         android:text="Phone number"
+        android:textSize="20sp"
         android:textColor="@android:color/white"
-        android:textSize="20sp" />
+        android:layout_marginTop="24dp"
+        android:gravity="center" />
 
     <!-- Subtitle Text -->
     <TextView
         android:id="@+id/subtitleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
         android:text="Enter your phone number to get started."
+        android:textSize="14sp"
         android:textColor="#888888"
-        android:textSize="14sp" />
+        android:layout_marginTop="8dp"
+        android:gravity="center" />
 
     <!-- Phone Number Input Layout -->
     <LinearLayout
-        android:id="@+id/phoneInputContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="0dp"
-        android:background="@drawable/phone_input_background"
         android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/phone_input_background"
         android:padding="8dp">
 
         <!-- Country Code Dropdown -->
@@ -71,13 +69,11 @@
         android:id="@+id/continueButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="0dp"
+        android:layout_marginTop="32dp"
         android:backgroundTint="#444444"
-        android:enabled="false"
-        android:padding="12dp"
         android:text="Continue"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:enabled="false"
+        android:padding="12dp" />
 
 </LinearLayout>
