@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1c1c1c"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Back Button -->
+        <TextView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&lt; Back"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:paddingBottom="16dp" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/appearanceTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Appearance"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <!-- Language Section -->
+        <TextView
+            android:id="@+id/languageLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Language"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:paddingTop="24dp" />
+
+        <TextView
+            android:id="@+id/languageValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="System default"
+            android:textColor="#BBBBBB"
+            android:textSize="14sp"
+            android:paddingBottom="16dp" />
+
+        <!-- Theme Section -->
+        <TextView
+            android:id="@+id/themeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Theme"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:paddingTop="16dp" />
+
+        <TextView
+            android:id="@+id/themeValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="System default"
+            android:textColor="#BBBBBB"
+            android:textSize="14sp"
+            android:paddingBottom="16dp" />
+
+        <!-- Chat Color & Wallpaper Section -->
+        <TextView
+            android:id="@+id/chatColorLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chat color &amp; wallpaper"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp" />
+
+        <!-- App Icon Section -->
+        <TextView
+            android:id="@+id/appIconLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="App Icon"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp" />
+
+        <!-- Message Font Size Section -->
+        <TextView
+            android:id="@+id/fontSizeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Message font size"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:paddingTop="16dp" />
+
+        <TextView
+            android:id="@+id/fontSizeValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Normal"
+            android:textColor="#BBBBBB"
+            android:textSize="14sp"
+            android:paddingBottom="16dp" />
+
+        <!-- Navigation Bar Size Section -->
+        <TextView
+            android:id="@+id/navBarSizeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Navigation bar size"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:paddingTop="16dp" />
+
+        <TextView
+            android:id="@+id/navBarSizeValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Normal"
+            android:textColor="#BBBBBB"
+            android:textSize="14sp"
+            android:paddingBottom="16dp" />
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -8,4 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="darkGray">#A9A9A9</color>
+    <color name="nav_icon_color">#A6A6A6</color>
+    <color name="nav_icon_color_selected">#FFFFFF</color>
+    <color name="customButtonColor">#4C5C75</color>
 </resources>

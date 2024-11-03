@@ -1,111 +1,139 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
-    android:orientation="vertical"
+    android:background="#1c1c1c"
     tools:context=".ChatsFragment">
 
-    <!-- Top Bar with Profile Icon, Signal Title, and Search -->
+    <!-- Main Layout for content -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="16dp"
-        android:gravity="center_vertical">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <!-- Profile Icon -->
-        <ImageView
-            android:id="@+id/profileIcon"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/profile"
-            android:contentDescription="Profile Icon"
-            android:scaleType="centerCrop"
-            android:layout_marginEnd="16dp"
-            android:background="?android:attr/selectableItemBackgroundBorderless" />
-
-        <!-- Signal Title -->
-        <TextView
-            android:layout_width="0dp"
+        <!-- Search Bar Overlay -->
+        <LinearLayout
+            android:id="@+id/searchOverlay"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:background="#333333"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/searchBackIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/back_icon"
+                app:tint="@android:color/white"
+                android:contentDescription="Back to chats" />
+
+            <EditText
+                android:id="@+id/searchEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Search"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/darker_gray"
+                android:background="@null"
+                android:padding="8dp"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <!-- Top Bar with Profile Icon, Signal Title, and Search -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <!-- Profile Icon -->
+            <ImageView
+                android:id="@+id/profileIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/profile"
+                android:contentDescription="Profile Icon"
+                android:layout_marginEnd="16dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                app:tint="@android:color/white" />
+
+            <!-- Signal Title -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Signal"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center" />
+
+            <!-- Search Icon -->
+            <ImageView
+                android:id="@+id/searchicon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/searchicon"
+                app:tint="@android:color/white"
+                android:contentDescription="Search"
+                android:layout_marginEnd="16dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless" />
+
+            <!-- Settings Icon -->
+            <ImageView
+                android:id="@+id/settingsIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/dots"
+                app:tint="@android:color/white"
+                android:contentDescription="Settings"
+                android:background="?android:attr/selectableItemBackgroundBorderless" />
+        </LinearLayout>
+
+        <!-- ScrollView for Chats -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="Signal"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:gravity="center" />
+            android:padding="8dp">
 
-        <!-- Search Icon -->
-        <ImageView
-            android:id="@+id/searchIcon"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/search"
-            android:contentDescription="Search"
-            android:layout_marginEnd="8dp"
-            android:background="?android:attr/selectableItemBackgroundBorderless" />
+            <LinearLayout
+                android:id="@+id/chatContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
 
-        <!-- Three-dot menu Icon (optional if needed) -->
-        <ImageView
-            android:id="@+id/menuIcon"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/dots"
-            android:contentDescription="More options"
-            android:background="?android:attr/selectableItemBackgroundBorderless" />
     </LinearLayout>
 
-    <!-- Empty Chats Message -->
-    <TextView
-        android:id="@+id/noChatsText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="No chats yet."
-        android:textSize="18sp"
-        android:textColor="@android:color/white"
-        android:layout_gravity="center"
-        android:layout_marginTop="32dp" />
-
-    <TextView
-        android:id="@+id/getStartedText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Get started by messaging a friend."
-        android:textSize="14sp"
-        android:textColor="#888888"
-        android:layout_gravity="center"
-        android:layout_marginTop="8dp" />
-
-    <!-- Spacer -->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-
-    <!-- Floating Action Button for Camera -->
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_camera"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/camera_app"
-        android:layout_gravity="end"
-        android:layout_margin="16dp"
-        app:tint="@android:color/white"
-        app:backgroundTint="@color/darkGray" />
-
-    <!-- Floating Action Button for Compose (Above the Camera FAB) -->
+    <!-- Floating Action Button for Compose (Bottom Floating Button) -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_compose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/search"
-        android:layout_gravity="end"
-        android:layout_margin="16dp"
-        android:layout_marginBottom="80dp"
+        android:src="@drawable/editicon"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         app:tint="@android:color/white"
         app:backgroundTint="@color/darkGray" />
 
-</LinearLayout>
+    <!-- Floating Action Button for Camera (Above the Compose Button) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cameraicon"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="80dp"
+    app:tint="@android:color/white"
+    app:backgroundTint="@color/darkGray" />
+
+</FrameLayout>

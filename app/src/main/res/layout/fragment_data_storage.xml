@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1c1c1c"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Section: Manage Storage -->
+        <TextView
+            android:id="@+id/manageStorageTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manage storage"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingTop="16dp" />
+
+        <TextView
+            android:id="@+id/storageSizeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="499.8 kB"
+            android:textColor="#BBBBBB"
+            android:textSize="14sp"
+            android:paddingBottom="16dp" />
+
+        <!-- Section: Media Auto-download -->
+        <TextView
+            android:id="@+id/mediaAutoDownloadTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Media auto-download"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingTop="16dp" />
+
+        <TextView
+            android:id="@+id/mobileDataTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="When using mobile data"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:paddingTop="8dp" />
+
+        <TextView
+            android:id="@+id/mobileDataDetailsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Images, Audio"
+            android:textColor="#BBBBBB"
+            android:textSize="14sp"
+            android:paddingBottom="16dp" />
+
+        <TextView
+            android:id="@+id/wifiTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="When using Wi-Fi"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:paddingTop="8dp" />
+
+        <TextView
+            android:id="@+id/wifiDetailsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Images, Audio, Video, Documents"
+            android:textColor="#BBBBBB"
+            android:textSize="14sp"
+            android:paddingBottom="16dp" />
+
+        <TextView
+            android:id="@+id/roamingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="When roaming"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:paddingTop="8dp" />
+
+        <TextView
+            android:id="@+id/roamingDetailsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="None"
+            android:textColor="#BBBBBB"
+            android:textSize="14sp"
+            android:paddingBottom="16dp" />
+
+        <!-- Section: Media Quality -->
+        <TextView
+            android:id="@+id/mediaQualityTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Media quality"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingTop="16dp" />
+
+        <TextView
+            android:id="@+id/mediaQualityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sent media quality"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:paddingTop="8dp" />
+
+        <TextView
+            android:id="@+id/sentMediaQualityDetailsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Standard"
+            android:textColor="#BBBBBB"
+            android:textSize="14sp"
+            android:paddingBottom="16dp" />
+
+        <TextView
+            android:id="@+id/sentMediaQualityInfoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sending high quality media will use more data."
+            android:textColor="#BBBBBB"
+            android:textSize="14sp"
+            android:paddingBottom="16dp" />
+
+        <!-- Section: Calls -->
+        <TextView
+            android:id="@+id/callsTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calls"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingTop="16dp" />
+
+        <TextView
+            android:id="@+id/callsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Use less data for calls"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:paddingTop="8dp" />
+
+        <TextView
+            android:id="@+id/useLessDataForCallsDetailsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Never"
+            android:textColor="#BBBBBB"
+            android:textSize="14sp"
+            android:paddingBottom="16dp" />
+
+        <TextView
+            android:id="@+id/useLessDataForCallsInfoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Using less data may improve calls on bad networks"
+            android:textColor="#BBBBBB"
+            android:textSize="14sp"
+            android:paddingBottom="16dp" />
+
+        <!-- Section: Proxy -->
+        <TextView
+            android:id="@+id/proxyTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Proxy"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingTop="16dp" />
+
+        <TextView
+            android:id="@+id/useProxyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Use proxy"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:paddingTop="8dp" />
+
+        <TextView
+            android:id="@+id/useProxyDetailsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Off"
+            android:textColor="#BBBBBB"
+            android:textSize="14sp"
+            android:paddingBottom="16dp" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

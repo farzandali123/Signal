@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.PopupMenu
 import androidx.fragment.app.Fragment
+import android.widget.EditText
+import android.widget.LinearLayout
 
 class CallsFragment : Fragment() {
 
@@ -17,6 +19,10 @@ class CallsFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_calls, container, false)
+        val searchOverlay = view.findViewById<LinearLayout>(R.id.searchOverlay)
+        val searchIcon = view.findViewById<ImageView>(R.id.searchicon)
+        val searchBackIcon = view.findViewById<ImageView>(R.id.searchBackIcon)
+        val searchEditText = view.findViewById<EditText>(R.id.searchEditText)
 
         // Find the settings (three dots) icon
         val settingsIcon = view.findViewById<ImageView>(R.id.settingsIcon)
@@ -26,6 +32,18 @@ class CallsFragment : Fragment() {
         settingsIcon.setOnClickListener {
             showPopupMenu(it)
         }
+        // Show search overlay when search icon is clicked
+        searchIcon.setOnClickListener {
+            searchOverlay.visibility = View.VISIBLE
+            searchEditText.requestFocus()
+        }
+
+// Hide search overlay when back icon is clicked
+        searchBackIcon.setOnClickListener {
+            searchOverlay.visibility = View.GONE
+            searchEditText.setText("") // Clear search text if needed
+        }
+
 
         // Set an OnClickListener to navigate to Settings when the profile icon is clicked
         profileIcon.setOnClickListener {
@@ -37,6 +55,15 @@ class CallsFragment : Fragment() {
         }
 
         return view
+    }
+    override fun onResume() {
+        super.onResume()
+        (activity as? MainActivity)?.showNavBar(true)
+    }
+
+    override fun onStop() {
+        super.onStop()
+        (activity as? MainActivity)?.showNavBar(false)
     }
 
     // Method to display a popup menu
