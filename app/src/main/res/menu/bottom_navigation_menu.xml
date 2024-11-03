@@ -1,14 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/menu_chats"
+        android:id="@+id/nav_chats"
         android:icon="@drawable/chat"
-        android:title="Chats"/>
+        android:title="Chats" />
     <item
-        android:id="@+id/menu_calls"
-        android:icon="@drawable/img"
-        android:title="Calls"/>
+        android:id="@+id/nav_calls"
+        android:icon="@drawable/phoneicon"
+        android:title="Calls" />
     <item
-        android:id="@+id/menu_stories"
+        android:id="@+id/nav_stories"
         android:icon="@drawable/stories"
-        android:title="Stories"/>
+        android:title="Stories" />
 </menu>

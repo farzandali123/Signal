@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="#1c1c1c"
     tools:context=".CallsFragment">
+
 
     <!-- Top Bar with Profile Icon, Signal Title, Search, and Settings -->
     <LinearLayout
@@ -26,7 +27,8 @@
             android:contentDescription="Profile Icon"
             android:scaleType="centerCrop"
             android:layout_marginEnd="8dp"
-            android:background="?android:attr/selectableItemBackgroundBorderless" />
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            app:tint="@android:color/white" />
 
         <!-- Signal Title -->
         <TextView
@@ -40,24 +42,57 @@
 
         <!-- Search Icon -->
         <ImageView
-            android:id="@+id/searchIcon"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/search"
+            android:id="@+id/searchicon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/searchicon"
+            app:tint="@android:color/white"
             android:contentDescription="Search"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="16dp"
             android:background="?android:attr/selectableItemBackgroundBorderless" />
 
         <!-- Settings Icon -->
         <ImageView
             android:id="@+id/settingsIcon"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:src="@drawable/dots"
+            app:tint="@android:color/white"
             android:contentDescription="Settings"
             android:background="?android:attr/selectableItemBackgroundBorderless" />
     </LinearLayout>
 
+    <!-- Search Bar Overlay -->
+    <LinearLayout
+        android:id="@+id/searchOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="#333333"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/searchBackIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/back_icon"
+            app:tint="@android:color/white"
+            android:contentDescription="Back to chats" />
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Search"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/darker_gray"
+            android:background="@null"
+            android:padding="8dp"
+            android:singleLine="true" />
+
+    </LinearLayout>
     <!-- Empty Calls Message -->
     <TextView
         android:id="@+id/noCallsText"
@@ -90,7 +125,7 @@
         android:id="@+id/fab_call"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/img"
+        android:src="@drawable/phoneicon"
         android:layout_gravity="end"
         android:layout_margin="16dp"
         app:tint="@android:color/white"

@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Signal</string>
+    <string name="appearance_title">Appearance</string>
+    <string name="language_label">Language</string>
+    <string name="language_value_default">System default</string>
+    <string name="theme_label">Theme</string>
+    <string name="theme_value_default">System default</string>
+    <string name="chat_color_label">Chat color and wallpaper</string>
+    <string name="app_icon_label">App Icon</string>
+    <string name="font_size_label">Message font size</string>
+    <string name="font_size_value_default">Normal</string>
+    <string name="nav_bar_size_label">Navigation bar size</string>
+    <string name="nav_bar_size_value_default">Normal</string>
 </resources>

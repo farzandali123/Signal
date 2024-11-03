@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -36,35 +37,38 @@
         android:orientation="vertical"
         android:layout_gravity="center_horizontal">
 
-        <!-- Profile Image -->
+        <!-- Profile Image (Circular) -->
         <ImageView
+            android:id="@+id/profileIcon"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/camera_app"
-            android:background="?android:attr/selectableItemBackgroundBorderless"
-            android:scaleType="centerCrop"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="8dp" />
+            android:src="@drawable/profile"
+        android:background="@drawable/oval_shape"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
+        android:clipToOutline="true" />
 
-        <!-- Camera Icon -->
+        <!-- Camera Icon (White) -->
         <ImageView
+            android:id="@+id/cameraIcon"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/camera_app"
+            android:src="@drawable/cameraicon"
             android:layout_gravity="center_horizontal"
-            android:background="?android:attr/selectableItemBackgroundBorderless"
-            android:layout_marginBottom="8dp" />
-
-        <!-- Profile Name -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Farzand Ali"
-            android:textColor="@android:color/white"
-            android:textSize="16sp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="8dp"
+            app:tint="@android:color/white" />
     </LinearLayout>
+
+    <!-- Profile Name -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Farzand Ali"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
 
     <!-- First Name Input -->
     <EditText
@@ -100,10 +104,12 @@
 
         <!-- Icon -->
         <ImageView
+            android:id="@+id/visibilityIcon"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:src="@drawable/camera_app"
-            android:layout_marginEnd="8dp" />
+            android:src="@drawable/cameraicon"
+            android:layout_marginEnd="8dp"
+            app:tint="@android:color/white"/>
 
         <!-- Text -->
         <TextView

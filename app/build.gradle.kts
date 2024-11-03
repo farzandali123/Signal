@@ -5,8 +5,16 @@ plugins {
 }
 
 android {
+
     namespace = "com.example.signal"
     compileSdk = 34
+    buildFeatures {
+        compose = true
+        viewBinding = true // Enable view binding
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.2"
+    }
 
     defaultConfig {
         applicationId = "com.example.signal"
@@ -41,6 +49,7 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.2"
     }
+
 }
 
 dependencies {
