@@ -1,30 +1,45 @@
 package com.example.signal
 
-import android.net.Uri
+import android.graphics.BitmapFactory
+import android.util.Base64
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class StatusAdapter(private val statusList: List<Uri>) : RecyclerView.Adapter<StatusAdapter.StatusViewHolder>() {
+class UserStatusAdapter(
+    private val userStatusList: List<UserStatus>,
+    private val onStatusClick: (UserStatus) -> Unit
+) : RecyclerView.Adapter<UserStatusAdapter.UserStatusViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StatusViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserStatusViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_status, parent, false)
-        return StatusViewHolder(view)
+        return UserStatusViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: StatusViewHolder, position: Int) {
-        holder.bind(statusList[position])
-    }
+    override fun onBindViewHolder(holder: UserStatusViewHolder, position: Int) {
+        val userStatus = userStatusList[position]
+        holder.userNameTextView.text = userStatus.userName
 
-    override fun getItemCount(): Int = statusList.size
-
-    inner class StatusViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val imageView: ImageView = itemView.findViewById(R.id.statusImageView)
-
-        fun bind(uri: Uri) {
-            imageView.setImageURI(uri)
+        // Decode the first status image
+        val firstStatus = userStatus.statuses.firstOrNull()
+        if (firstStatus != null) {
+            val imageBytes = Base64.decode(firstStatus.imageUrl, Base64.DEFAULT)
+            val bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
+            holder.statusImageView.setImageBitmap(bitmap)
         }
+
+        holder.itemView.setOnClickListener {
+            onStatusClick(userStatus)
+        }
+    }
+
+    override fun getItemCount(): Int = userStatusList.size
+
+    inner class UserStatusViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val statusImageView: ImageView = itemView.findViewById(R.id.statusImageView)
+        val userNameTextView: TextView = itemView.findViewById(R.id.userNameTextView)
     }
 }
