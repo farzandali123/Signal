@@ -1,3 +1,4 @@
+
 package com.example.signal
 
 import android.content.Intent
@@ -34,16 +35,16 @@ class AccountFragment : Fragment(R.layout.fragment_account) {
         val changePhoneNumberTextView = view.findViewById<TextView>(R.id.changePhoneNumberTextView)
         changePhoneNumberTextView.setOnClickListener {
             // Start PhoneNumberActivity
-            val intent = Intent(requireContext(), PhoneNumberActivity::class.java)
-            startActivity(intent)
+           // val intent = Intent(requireContext(), PhoneNumberActivity::class.java)
+           // startActivity(intent)
         }
 
         // Handle "Delete account" click
         val deleteAccountTextView = view.findViewById<TextView>(R.id.deleteAccountTextView)
         deleteAccountTextView.setOnClickListener {
             // Start PhoneNumberActivity (assuming it's the same activity for delete account)
-            val intent = Intent(requireContext(), PhoneNumberActivity::class.java)
-            startActivity(intent)
+           // val intent = Intent(requireContext(), PhoneNumberActivity::class.java)
+            //startActivity(intent)
         }
 
         // Add any additional logic here

@@ -29,7 +29,8 @@
                 android:layout_height="24dp"
                 android:src="@drawable/back_icon"
                 app:tint="@android:color/white"
-                android:contentDescription="Back to chats" />
+                android:contentDescription="Back to chats"
+                android:layout_marginEnd="8dp" />
 
             <EditText
                 android:id="@+id/searchEditText"
@@ -96,8 +97,39 @@
                 android:background="?android:attr/selectableItemBackgroundBorderless" />
         </LinearLayout>
 
+        <!-- Placeholder for Empty State -->
+        <LinearLayout
+            android:id="@+id/emptyStateContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/emptyStateIcon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/profile"
+                android:tint="@android:color/darker_gray"
+                android:contentDescription="No chats available"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/emptyStateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No chats available"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="16sp"
+                android:gravity="center" />
+        </LinearLayout>
+
         <!-- ScrollView for Chats -->
         <ScrollView
+            android:id="@+id/chatsScrollView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -112,19 +144,20 @@
 
     </LinearLayout>
 
-    <!-- Floating Action Button for Compose (Bottom Floating Button) -->
+    <!-- Floating Action Button for Starting New Chat -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_compose"
+        android:id="@+id/fab_new_chat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/editicon"
+        android:src="@drawable/plus_round_icon"
         android:layout_gravity="end|bottom"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         app:tint="@android:color/white"
-        app:backgroundTint="@color/darkGray" />
+        app:backgroundTint="@color/purple_200"
+        android:contentDescription="Start New Chat" />
 
-    <!-- Floating Action Button for Camera (Above the Compose Button) -->
+    <!-- Floating Action Button for Camera -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_camera"
         android:layout_width="wrap_content"
@@ -133,7 +166,8 @@
         android:layout_gravity="end|bottom"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="80dp"
-    app:tint="@android:color/white"
-    app:backgroundTint="@color/darkGray" />
+        app:tint="@android:color/white"
+        app:backgroundTint="@color/purple_200"
+        android:contentDescription="Open Camera" />
 
 </FrameLayout>
